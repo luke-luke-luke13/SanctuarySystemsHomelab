@@ -8,9 +8,9 @@ Ok, but if I wasn't passionate about this project, what other reasons are there 
 
 Ok, *but what if I don't care about none of that? Why else is such a project necessary?* As you have no doubt experienced in one way or the other, corporate America is becoming increasingly more anti-consumer. Everything exists as a subscription. Software-as-a-service (SAAS) has allowed companies to charge more and more for products while simultaneously stripping features and functionality. Media conglomerates fight tooth and nail for streaming rights, only to move their content to another god-forsaken streaming service that starts at $10+/month with no guarantee that the specific content you paid for will still be available in 6 months (See meme below). On top of that, even purchasing a digital copy of something usually does not give you access to the raw file. You are stuck relying on a company to honor that purchase, host the file, and provide it to you when you want, which they most certainly won't when push comes to shove. Most of the software and services you rely on can be self-hosted on your own hardware, removing the need for monthly subscriptions, reducing your bandwidth consumption, and providing you with better autonomy over the things that matter to you. In the case of digital media like movies, music, and shows, you can *obtain** the raw files in some fashion and store them on your device, forever guaranteeing access without incurring additional costs.
 
-**How you obtain the media is entirely up to you. It can be as legal as purchasing and ripping dvds, or as illegal as straight piracy. However, media corporations are routinely getting scolded for not properly compensating their talent and production staffs while raking in record profits, and that makes it hard to believe that piracy is hurting anyone. Do with that what you wish. (Your mileage may vary)* 
+**How you obtain the media is entirely up to you. It can be as legal as purchasing and ripping dvds, or as illegal as straight piracy. For brevity's sake, I will not elaborate on my views towards piracy. (take a wild guess!)*
 
-<center> <img src=".\StargateThreeHomelabImages\onPoob.jpeg" alt="It's Literally on Poob" style="width:400px;" /> </center>
+<img src=".\images\onPoob.jpeg" alt="It's Literally on Poob" style="width:400px;" />
 
 ## Hardware Overview
 
@@ -19,7 +19,7 @@ The networking for this project begins at the router. I am using an EdgeRouter X
 
 I am also using a GigaPlus 8x2.5G PoE+ with 2x10G SFP switch for aggregation. I had mixed feelings about buying this switch, as it isn't a typical mainstream brand, but many people online have had good success with this particular model. Time will tell, but so far I am ok with it. Having 8 x 2.5G with PoE+ for less than $100 is a damn good deal.  
 
-<img src=".\StargateThreeHomelabImages\edgeRouterX.png" alt="Edge Router X" style="width:300px;" /> <img src=".\StargateThreeHomelabImages\gigaPlusSwitch.jpg" alt="GigaPlus Switch" style="width:300px;" />
+<img src=".\images\edgeRouterX.png" alt="Edge Router X" style="width:300px;" /> <img src=".\images\gigaPlusSwitch.jpg" alt="GigaPlus Switch" style="width:300px;" />
 
 ### Compute
 
@@ -30,14 +30,14 @@ I am also using a GigaPlus 8x2.5G PoE+ with 2x10G SFP switch for aggregation. I 
 * Storage: 1TB NVME SSD
 * Networking: 2x10G SFP+, 2x2.5G RJ45
 
-<center><img src=".\StargateThreeHomelabImages\minisForumMS01.jpg" alt="MinisForum MS-01" style="width:300px;" /></center>
+<center><img src=".\images\minisForumMS01.jpg" alt="MinisForum MS-01" style="width:300px;" /></center>
 
 ### Auxilliary Compute
 
 A very small amount of compute resources are available via a Raspberry Pi 5 8GB model. 
 The pi is equipped with a PoE+ and M.2 SSD hat, with a 256GB SSD. 
 
-<center> <img src=".\StargateThreeHomelabImages\rpi.jpg" alt="RPi with PoE SSD Hat" style="width:300px;" /> </center>
+<center> <img src=".\images\rpi.jpg" alt="RPi with PoE SSD Hat" style="width:300px;" /> </center>
 
 ### Network Attached Storage
 
@@ -48,11 +48,11 @@ NAS functions are handled by a Synology DS1522+. Drive configuration is as follo
 
 The drives are configured in a Synology Hybrid Raid, which results in approx. 14.5TB usable and 7.3TB of protection.
 
-<center> <img src=".\StargateThreeHomelabImages\ds1522.jpg" alt="Synology DS1522+ NAS" style="width:300px;" /> </center>
+<center> <img src=".\images\ds1522.jpg" alt="Synology DS1522+ NAS" style="width:300px;" /> </center>
 
 ### Power Management
 An Eaton Tripp-Lite BC600RNC UPS provides uninterruptable power for the entire rack. The UPS is rated for 600VA and features 4 x 120V outlets as well as network connectivity and remote management. 
-<center> <img src=".\StargateThreeHomelabImages\eatonUPS.jpg" alt="Eaton BC600RNC UPS" style="width:300px;" /> </center>
+<center> <img src=".\images\eatonUPS.jpg" alt="Eaton BC600RNC UPS" style="width:300px;" /> </center>
 
 ## Software Overview
 
@@ -79,7 +79,7 @@ I am running a Tdarr transcoding container to access the GPU for QuickSync suppo
 
 
 #### Netman LXC ``` 2 CPU Cores, 1GB RAM, 4GB Disk ``` 
-Netman handles all network related tasks, including nginx reverse proxy and cloudflare dynamic dns. nginx grants me access to services from outside my local network, and cloudflare ddns auto updates my domain name (stargatethree.com) to match my current IP.
+Netman handles all network related tasks, including nginx reverse proxy and cloudflare dynamic dns. nginx grants me access to services from outside my local network, and cloudflare ddns auto updates my domain name to match my current IP.
 
 
 #### Starplex LXC ``` 4 CPU Cores, 4GB RAM, 32GB Disk ```
@@ -105,7 +105,7 @@ PiHole is a DNS sinkhole that protects devices from unwanted content without nee
 NUT allows a server to monitor the status of a UPS and report that back to all other servers that are configured to listen. When battery percentage drops to a certain point, NUT can automatically issue safe shutdown commands to every server to ensure that things stay safe even during complete power and battery loss. 
 
 #### copyparty fileserver (new addition)
-I just saw a promotional video for CopyParty, which is an insanely feature rich and powerful bit of open-source fileserver software. I am excited to try this on the Pi to take advantage of the SSD. Need to experiment with it before I pass judgement on it, but so far I really like what I see. copyparty features resumable uploads/downloads, uses python 2 or 3, supports http/https, webdav, ftp, tftp, smp/cifs
+I just saw a promotional video for copyparty, which is an insanely feature rich and powerful bit of open-source fileserver software. I am excited to try this on the Pi to take advantage of the SSD. Need to experiment with it before I pass judgement on it, but so far I really like what I see. copyparty features resumable uploads/downloads, uses python 2 or 3, supports http/https, webdav, ftp, tftp, smp/cifs
 
 ## Rack Overview 
 The entire system is contained in a 10 inch, 12U DeskPi Rack. I chose this rack for its form-factor (the 10in rack is absolutely killer for small scale deployments) and aesthetics. I'm a sucker for brushed aluminum and the tinted tempered glass side panels really tie the whole thing together. I also wanted something that was completely self-contained, requiring only 2 external connections: 120V power (via 1 plug from the UPS) and networking (via 1 RJ45 cable to the router). The whole thing weighs about 35-50lbs and can easily be moved and redeployed anywhere. 
