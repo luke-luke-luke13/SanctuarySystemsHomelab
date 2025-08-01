@@ -117,7 +117,7 @@ The entire system is contained in a 10 inch, 12U DeskPi Rack. I chose this rack 
 <img src=".\images\wholeRack.jpg" alt="Rack" style="width:300px;" />
 
 #### Sanctuary Systems Nameplate
-The nameplate was manufactured by SendCutSend out of 0.063" 5052 aluminum and anodized black. The lettering was laser cut and I was honestly so blown away by the quality of the finished part. A DXF for a blanking plate is available, and all you need to do is add your own text or logo. The part cost about $30 USD to manufacture and took about 2 weeks to arrive, but in my opinion it is well worth it. 
+The nameplate was manufactured by SendCutSend out of 0.063" 5052 aluminum and anodized black. The lettering was laser cut and I was honestly so blown away by the quality of the finished part. A DXF for a blanking plate is available in the ```CAD Files``` folder, and all you need to do is add your own text or logo. The part cost about $30 USD to manufacture and took about 2 weeks to arrive, but in my opinion it is well worth it. 
 
 <img src=".\images\nameplate.jpg" alt="Sanctuary Systems Nameplate" style="width:300px;" />
 
