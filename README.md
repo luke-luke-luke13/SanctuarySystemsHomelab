@@ -114,8 +114,12 @@ I just saw a promotional video for copyparty, which is an insanely feature rich 
 ## Rack Overview 
 The entire system is contained in a 10 inch, 12U DeskPi Rack. I chose this rack for its form-factor (the 10in rack is absolutely killer for small scale deployments) and aesthetics. I'm a sucker for brushed aluminum and the tinted tempered glass side panels really tie the whole thing together. I also wanted something that was completely self-contained, requiring only 2 external connections: 120V power (via 1 plug from the UPS) and networking (via 1 RJ45 cable to the router). The whole thing weighs about 35-50lbs and can easily be moved and redeployed anywhere. 
 
+<img src=".\images\wholeRack.jpg" alt="Rack" style="width:300px;" />
+
 #### Sanctuary Systems Nameplate
 The nameplate was manufactured by SendCutSend out of 0.063" 5052 aluminum and anodized black. The lettering was laser cut and I was honestly so blown away by the quality of the finished part. A DXF for a blanking plate is available, and all you need to do is add your own text or logo. The part cost about $30 USD to manufacture and took about 2 weeks to arrive, but in my opinion it is well worth it. 
+
+<img src=".\images\nameplate.jpg" alt="Sanctuary Systems Nameplate" style="width:300px;" />
 
 #### Rack Shelves and Accessories
 As the 10 inch rack form-factor is still relatively new, all of the shelves and accessories I bought came from DeskPi. I have a couple of the 0.5U shelves, 1 of the 1U shelves and a 0.5U 12 Port RJ45 patch panel. All of the blanking plates came with the rack itself, and I'm using them to cover the dead space at the bottom where the UPS lives. 
